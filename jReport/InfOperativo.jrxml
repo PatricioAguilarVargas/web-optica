@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="productos" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7db5e0bf-e850-4edc-8496-a64ce2954291">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="479"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="521"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="DOCTOR" class="java.lang.String"/>
+	<parameter name="HORA" class="java.lang.String"/>
+	<parameter name="FECHA" class="java.lang.String"/>
+	<queryString language="xPath">
+		<![CDATA[/resourse/item]]>
+	</queryString>
+	<field name="NOMBRE" class="java.lang.String">
+		<fieldDescription><![CDATA[NOMBRE]]></fieldDescription>
+	</field>
+	<field name="HORA" class="java.lang.String">
+		<fieldDescription><![CDATA[HORA]]></fieldDescription>
+	</field>
+	<field name="TELEFONO" class="java.lang.String">
+		<fieldDescription><![CDATA[TELEFONO]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="41" width="572" height="1" forecolor="#666666" uuid="0f2b7fea-fe32-4198-adbc-ffe9149b46b7"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<textField pattern="MMM d, yyyy">
+				<reportElement x="436" y="1" width="140" height="20" forecolor="#666666" uuid="93161b95-66f9-4114-95d8-f6e423a52788"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="142" y="1" width="280" height="41" uuid="dbb524d0-a64b-49b6-99c6-15f4b80dad88"/>
+				<imageExpression><![CDATA["opBeTransparente.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="44" width="572" height="30" forecolor="#666666" uuid="3024eadc-6b23-41f7-825b-a84aeaf90182"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PACIENTES DE OPERATIVO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="74" width="52" height="20" forecolor="#666666" uuid="b597855f-a88a-4f80-92b7-d773be657092"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DOCTOR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="73" width="36" height="20" forecolor="#666666" uuid="c0fed7e5-4511-4ffb-b787-1c95584ec900"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[HORA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="93" width="52" height="20" forecolor="#666666" uuid="a1f82380-911a-4c01-9490-9ae5490e1eb8"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<rectangle radius="3">
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="0" y="113" width="572" height="23" forecolor="#666666" backcolor="#CCCCCC" uuid="efae1852-ec37-45f0-9d95-f6653f1ba922"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="119" width="120" height="17" forecolor="#333333" uuid="46e2267d-a9d9-4b56-a38e-08b56df83f44"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="119" width="120" height="17" forecolor="#333333" uuid="e427582b-40d2-43e9-99ed-d1e3be67c3e1"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELÉFONO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="118" width="71" height="17" forecolor="#333333" uuid="b8a91f59-f0b1-4ac5-8879-c822ff48449d"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRMA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="74" width="370" height="20" uuid="f839f133-5520-4523-85e7-46715fea8ffc"/>
+				<textFieldExpression><![CDATA[$P{DOCTOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="74" width="84" height="20" uuid="818818d8-1e5a-49c2-90a9-261c915a16f7"/>
+				<textFieldExpression><![CDATA[$P{HORA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="52" y="94" width="139" height="20" uuid="9d2a6b08-d0b5-4560-8834-3f4583fcef00"/>
+				<textFieldExpression><![CDATA[$P{FECHA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<rectangle radius="3">
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="31" forecolor="#666666" backcolor="#FFFFFF" uuid="9238b77a-8fc9-46f1-a995-690e106917ec"/>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="0" width="312" height="20" uuid="b0b04b92-af7b-4be6-b9f2-9c330566ecce"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="0" width="116" height="20" uuid="2a10eaac-80f7-4d4a-8838-1ad87aecc89b"/>
+				<textFieldExpression><![CDATA[$F{TELEFONO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="452" y="0" width="75" height="24" uuid="25283700-4c48-4ec6-b83a-800926b2c1ee"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="527" y="0" width="45" height="23" uuid="d88c8705-b8c9-497e-b068-7f461a065e79"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
